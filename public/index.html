@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Scraping With Mongoose</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--<style>
+      body { background-color: #F2F6D0 }
+      #wrapper {
+        width: 960px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 5%;
+      }
+      #articles {
+        display: inline-block;
+        overflow: auto;
+        width: 60%;
+        height: 700px;
+      }
+      #notes {
+        float: right;
+        width: 30%;
+      }
+      textarea, input {
+        display: block;
+        width: 100%;
+        background-color: #FCF5C7;
+      }
+      input {
+        height: 36px;
+        font-size: 24px;
+      }
+      textarea {
+        height: 200px;
+        font-size: 18px;
+      }
+    </style>-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Scraping the web and your knees</h1>
+        <h2>Scrape Venture beat!</h2>
+        <button id="scrapebutton">Scrape!</button>
+      </div>
+      <div class="panel-group">
+          <div id="results" data-toggle='modal' data-target='#notesmodal'>
+            <!--<div id="articles"></div>
+            <div id="notes"></div>-->
+          </div>
+      </div>
+    </div>
+    <div id="notesmodal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Notes</h4>
+          </div>
+          <div class="modal-body">
+            <div id="notesbox"></div>
+          </div>
+          <div class="modal-footer">
+            <form class="form-inline">
+              <div class="form-group">
+                <label for="notetitle">Note Title:</label>
+                <input id="notetitleinput" type="text" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="notecontent">Contents:</label>
+                <input id="notecontentinput" type="text" class="form-control">
+              </div>
+              <button id="enternote" type="button" class="btn btn-default">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
