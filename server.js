@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb://localhost/mongoosehomework");
+mongoose.connect("mongodb://heroku_hrhdccs6:5r8ijbvo4fqd4qu4d8ijdpu08v@ds163758.mlab.com:63758/heroku_hrhdccs6");
 var db = mongoose.connection;
 
 // Show any mongoose errors
@@ -137,6 +137,6 @@ app.post("/articles/:id", function(req, res) {
     }
   });
 });
-app.listen(3000, function(){
+app.listen(process.env.PORT || 3000, function(){
   console.log("CONNECTED BOTCHd");
 })
